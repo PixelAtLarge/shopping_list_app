@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Shopping List App</title>
+	<link href="font_awesome/css/font-awesome.min.css" rel="stylesheet">
+	<link rel="icon" type="image/png" href="images/favicon.png"/>
+	<link href='http://fonts.googleapis.com/css?family=Lato:100,300,400' rel='stylesheet' type='text/css'>
+	<link type="text/css" rel="stylesheet" href="styles.css"/>
+</head>
+<body>
+	<header>
+		<img class="badge" src="images/shopping_bag_badge.png">
+	</header>
+	<div class="container">
+			<input id="add-items" type="text" name="add-items" placeholder="Add new list items here and press 'enter' to submit...">
+			<button class="filter">Sort list by...<i class="fa fa-sort"></i></button>
+		<div class="list-area">
+				<ul id="list">
+					<li class="active-item">
+						<i class="fa fa-square-o fa-lg"></i>
+						<div>Apples
+							<i class="fa fa-trash"></i>
+						</div>
+					</li>
+					<li class="active-item">
+						<i class="fa fa-square-o fa-lg"></i>
+						<div>Cereal
+							<i class="fa fa-trash"></i>
+						</div>
+					</li>					
+					<li class="active-item">
+						<i class="fa fa-square-o fa-lg"></i>
+						<div>Blueberries
+							<i class="fa fa-trash"></i>
+						</div>
+					</li>					
+					<li class="completed-item">
+						<i class="fa fa-check-square-o fa-lg"></i>
+						<div>Eggs
+							<i class="fa fa-trash"></i>
+						</div>
+					</li>
+					<li class="completed-item">
+						<i class="fa fa-check-square-o fa-lg"></i>
+						<div>Celery
+							<i class="fa fa-trash"></i>
+						</div>
+					</li>
+				</ul>
+			</div>
+	</div>
+	<footer>
+		<p>Made by Anna Lee - annaleedesign.com</p>
+	</footer>
+<script src="http://code.jquery.com/jquery-latest.min.js"></script>
+<script type="text/javascript" src="js/function.js"></script>
+</body>
+</html>
