@@ -44,6 +44,10 @@ input {
 	font-weight: 300;
 }
 
+input:focus {
+	outline: none;
+}
+
  .filter {
  	border-radius: 6px;
  	height: 35px;
