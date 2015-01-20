@@ -9,15 +9,8 @@ $(document).ready(function() {
 		$(this).parent().parent().slideUp(300);
 	})
 
-	$("li > i").on("click", function(){
-		if($(this).hasClass("fa-square-o")) {
-			$(this).parent().removeClass("active-item").addClass("completed-item");
-			$(this).removeClass("fa-square-o").addClass("fa-check-square-o");
-		} else {
-			$(this).parent().removeClass("completed-item").addClass("active-item");
-			$(this).removeClass("fa-check-square-o").addClass("fa-square-o");
-		}
-	});
+	$("li > i").on("click", updateListClass);
+
 
 	$(document).keyup(function(e) {
   	if(e.keyCode==13) {
@@ -26,7 +19,6 @@ $(document).ready(function() {
 	  	}
 	  }
 	});
-
 
 	function addListItem(){
 		var list_item = $("<li class='active-item'><i class='fa fa-square-o fa-lg'></i>\n<div>"  + $("#add-items").val() + "\n<i class='fa fa-trash'></i>\n</div></li>");
@@ -41,16 +33,18 @@ $(document).ready(function() {
 			$(this).parent().parent().slideUp(300);
 		})
 
-		$("li > i").first().on("click", function(){
-			if($(this).hasClass("fa-square-o")) {
-				$(this).parent().removeClass("active-item").addClass("completed-item");
-				$(this).removeClass("fa-square-o").addClass("fa-check-square-o");
-			} else {
-				$(this).parent().removeClass("completed-item").addClass("active-item");
-				$(this).removeClass("fa-check-square-o").addClass("fa-square-o");
-			}
-		});
+		$("li > i").first().on("click", updateListClass);
 		$("#add-items").val('');
+	}
+
+	function updateListClass(){
+		if($(this).hasClass("fa-square-o")) {
+			$(this).parent().removeClass("active-item").addClass("completed-item");
+			$(this).removeClass("fa-square-o").addClass("fa-check-square-o");
+		} else {
+			$(this).parent().removeClass("completed-item").addClass("active-item");
+			$(this).removeClass("fa-check-square-o").addClass("fa-square-o");
+		}
 	}
 
 });	
